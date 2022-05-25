@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Satpam Tanggap</string>
+    <string name="list_warga">List Warga</string>
+    <string name="warga">Warga</string>
+    <string name="list_satpam">List Satpam</string>
+    <string name="your_photo">Your Photo</string>
+    <string name="header">header</string>
+    <string name="regist_header_1">Ada warga baru nih,</string>
+    <string name="regist_header_2">Register!</string>
+    <string name="circle1">circle1</string>
+    <string name="circle2">circle2</string>
+    <string name="nama">Nama</string>
+    <string name="email">Email</string>
+    <string name="alamat">Alamat</string>
+    <string name="password">Password</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="register_button">Register</string>
+    <string name="telepon">Telepon</string>
+    <string name="password_ganda">Password Ganda</string>
+    <string name="password_tambahan">Password tambahan</string>
+    <string name="password_utama">Password utama</string>
+    <string name="sering_dihubungi">Sering Dihubungi</string>
+    <string name="daftar_kontak">Daftar Kontak</string>
+</resources>

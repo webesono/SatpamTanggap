@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/backgroud_icon.xml" value="0.121" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/background_chat_input.xml" value="0.1465" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/background_content_bottom.xml" value="0.1" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/background_content_top.xml" value="0.148" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/background_icon.xml" value="0.121" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/background_image.xml" value="0.121" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/background_input.xml" value="0.1125" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/background_sent_message.xml" value="0.1" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/background_top_sheet.xml" value="0.1" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/bottom_sheet_background.xml" value="0.1" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/bt_uiborder.xml" value="0.1085" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/bt_uisquare.xml" value="0.1085" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/chat_ing_background.xml" value="0.1" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/circle.xml" value="0.1775" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/circlet.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/ic_books.xml" value="0.1645" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/ic_logout.xml" value="0.121" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/ic_message.xml" value="0.1" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/ic_send.xml" value="0.1645" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/inline_input.xml" value="0.1645" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/drawable/laporan_img_background.xml" value="0.1545" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout-v23/activity_regiga.xml" value="0.1" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_change_pass.xml" value="0.22" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_chat.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_contact.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_dashboard.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_laporan.xml" value="0.22" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_list_chat.xml" value="0.19469026548672566" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_list_lap.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_listga.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_listpam.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_login.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_profile.xml" value="0.22" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_regiga.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/activity_regipam.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/item_change_pass.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/item_container_laporan.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/item_container_received_message.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/item_container_recent_conv.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/item_container_satpam.xml" value="0.1796875" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/item_container_sent_message.xml" value="0.1" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/item_container_user.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.18565400843881857" />
+        <entry key="..\:/Users/arif/AndroidStudioProjects/SatpamTanggap/app/src/main/res/layout/pop_up_delete.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
