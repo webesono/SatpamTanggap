@@ -16,3 +16,6 @@ I will show the data structures to be entered manually below
 ![image.png]( https://github.com/webesono/SatpamTanggap/blob/main/Screenshot%20(333).png )
 
 ![image.png]( https://github.com/webesono/SatpamTanggap/blob/main/Screenshot%20(332).png )
+
+
+the demo of the application will be on my youtube, so just wait, okay?
