@@ -7,10 +7,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Base64
-import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -18,7 +15,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.widget.AppCompatButton
 import com.example.satpamtanggap.R
 import com.example.satpamtanggap.databinding.ActivityProfileBinding
 import com.example.satpamtanggap.utilities.Constants
@@ -26,7 +22,6 @@ import com.example.satpamtanggap.utilities.PreferenceManager
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.io.ByteArrayOutputStream
 import java.io.FileNotFoundException
@@ -62,7 +57,9 @@ class ProfileActivity : AppCompatActivity() {
 
         binding.btnSimpan.setOnClickListener { updateData() }
 
-        binding.ubahPassword.setOnClickListener { ShowPopUpUbahPassword() }
+        binding.ubahPassword.setOnClickListener {
+            ShowPopUpUbahPassword()
+        }
 
     }
 
@@ -94,7 +91,7 @@ class ProfileActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         database.collection(Constants.KEY_COLLECTION_SATPAM)
-            .document(mAuth.currentUser?.uid!!)
+            .document(preferenceManager.getString(Constants.KEY_USER_ID)!!)
             .update(Constants.KEY_NAME, nama,
             Constants.KEY_TELEPON, telepon,
             Constants.KEY_IMAGE, image)
@@ -120,7 +117,7 @@ class ProfileActivity : AppCompatActivity() {
         binding.textPhoto.visibility = View.INVISIBLE
         binding.inputNama.setText( preferenceManager.getString(Constants.KEY_NAME))
         binding.inputTelp.setText( preferenceManager.getString(Constants.KEY_TELEPON))
-        binding.inputEmail.hint = mAuth.currentUser?.email
+        binding.inputEmail.hint = preferenceManager.getString(Constants.KEY_USER_EMAIL)
     }
 
     private fun decodeImage(image: String): Bitmap {
@@ -240,7 +237,7 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun reAuth(newPass: String, oldPass: String){
         val user = mAuth.currentUser!!
-        val credential = EmailAuthProvider.getCredential(user.email.toString(), oldPass)
+        val credential = EmailAuthProvider.getCredential(preferenceManager.getString(Constants.KEY_USER_EMAIL)!!, oldPass)
 
         user.reauthenticate(credential).addOnCompleteListener {
             if (it.isSuccessful){
@@ -257,7 +254,7 @@ class ProfileActivity : AppCompatActivity() {
         database = FirebaseFirestore.getInstance()
         mAuth = FirebaseAuth.getInstance()
         database.collection(Constants.KEY_COLLECTION_SATPAM)
-            .document(mAuth.currentUser?.uid!!)
+            .document(preferenceManager.getString(Constants.KEY_USER_ID)!!)
             .update(Constants.KEY_PASSWORD2, newPass2)
             .addOnCompleteListener {
                 if (it.isSuccessful){
@@ -309,5 +306,9 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun showToast(pesan: String){
         Toast.makeText(applicationContext, pesan,Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(applicationContext, DashboardActivity::class.java))
     }
 }

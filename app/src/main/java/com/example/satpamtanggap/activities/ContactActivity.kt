@@ -20,7 +20,6 @@ class ContactActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_contact)
 
         binding = ActivityContactBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -82,6 +81,10 @@ class ContactActivity : AppCompatActivity() {
         }else{
             binding.progressBar.visibility = View.INVISIBLE
         }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(applicationContext, DashboardActivity::class.java))
     }
 
 }

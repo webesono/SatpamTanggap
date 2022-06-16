@@ -87,4 +87,8 @@ class ListgaActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        startActivity(Intent(applicationContext, DashboardActivity::class.java))
+    }
+
 }

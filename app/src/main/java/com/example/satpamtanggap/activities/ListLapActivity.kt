@@ -79,6 +79,7 @@ class ListLapActivity : AppCompatActivity() {
         binding.errorText.visibility = View.VISIBLE
     }
 
-
-    
+    override fun onBackPressed() {
+        startActivity(Intent(applicationContext, DashboardActivity::class.java))
+    }
 }

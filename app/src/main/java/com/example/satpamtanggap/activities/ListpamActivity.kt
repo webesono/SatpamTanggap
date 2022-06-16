@@ -81,12 +81,17 @@ class ListpamActivity : AppCompatActivity() {
         binding.textError.text = String.format("%s", "Data satpam tidak tersedia")
     }
 
+
     private fun loading(isLoading: Boolean){
         if (isLoading){
             binding.progressBar.visibility = View.VISIBLE
         }else{
             binding.progressBar.visibility= View.INVISIBLE
         }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(applicationContext, DashboardActivity::class.java))
     }
 
 }

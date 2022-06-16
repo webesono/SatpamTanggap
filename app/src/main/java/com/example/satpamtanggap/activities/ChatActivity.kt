@@ -64,6 +64,7 @@ class ChatActivity : AppCompatActivity() {
     }
 
     private fun loadDetailsName(){
+
         val nama = intent.getStringExtra("name")
         binding.textName.text = nama
 

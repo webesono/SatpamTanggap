@@ -48,7 +48,6 @@ class UsersAdapter: RecyclerView.Adapter<UsersAdapter.UserViewHolder>{
             context.startActivity(intent)
         }
 
-
     }
 
     override fun getItemCount(): Int {

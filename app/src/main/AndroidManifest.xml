@@ -6,14 +6,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_satpam_tanggap"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_satpam_tanggap_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SatpamTanggap">
-        <activity
-            android:name=".activities.ChangePassActivity"
-            android:exported="false" />
         <activity
             android:name=".activities.ListLapActivity"
             android:exported="false" />

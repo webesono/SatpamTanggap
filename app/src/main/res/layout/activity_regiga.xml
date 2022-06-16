@@ -290,26 +290,6 @@
                         android:textSize="15sp"
                         tools:ignore="LabelFor" />
 
-                    <EditText
-                        android:id="@+id/etRole"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/etConfPassword"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:autofillHints=""
-                        android:backgroundTint="@color/white"
-                        android:drawableEnd="@drawable/ic_confirm_lock"
-                        android:drawablePadding="30dp"
-                        android:drawableTint="@color/white"
-                        android:inputType="text"
-
-                        android:visibility="gone"
-                        android:padding="10dp"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        tools:ignore="LabelFor" />
-
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>

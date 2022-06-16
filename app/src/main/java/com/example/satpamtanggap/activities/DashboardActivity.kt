@@ -25,6 +25,9 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var database: FirebaseFirestore
     private lateinit var mAuth: FirebaseAuth
 
+    private val TIME_INTERVAL = 2000
+    private var backPressed: Long = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -60,9 +63,9 @@ class DashboardActivity : AppCompatActivity() {
         binding.imageSignOut.setOnClickListener{
             signOut()
         }
-        binding.imageDeleteAccount.setOnClickListener {
-            showToast("klik untuk hapus akun")
-        }
+//        binding.imageDeleteAccount.setOnClickListener {
+//            showToast("klik untuk hapus akun")
+//        }
     }
 
     private fun loadUserDetails(){
@@ -116,50 +119,62 @@ class DashboardActivity : AppCompatActivity() {
 
     }
 
-    private fun deleteAkun(){
-        showToast("Deleting & Signing out ...")
+//    private fun deleteAkun(){
+//        showToast("Deleting & Signing out ...")
+//
+//
+//        database.collection(Constants.KEY_COLLECTION_SATPAM)
+//            .document(preferenceManager.getString(Constants.KEY_USER_ID).toString())
+//            .delete()
+//            .addOnCompleteListener {
+//                if (it.isSuccessful){
+//                    mAuth.signOut()
+//                }
+//            }
+//    }
 
+//    private fun ubahPass(newPass: String){
+//
+//        val user = mAuth.currentUser!!
+//        user.let {
+//            user.delete()
+//                .addOnCompleteListener {
+//                if (it.isSuccessful){
+//                    showToast("Berhasil menghapus akun!")
+//                }else{
+//                    showToast("Gagal menghapus akun")
+//                }
+//            }
+//        }
+//    }
 
-        database.collection(Constants.KEY_COLLECTION_SATPAM)
-            .document(preferenceManager.getString(Constants.KEY_USER_ID).toString())
-            .delete()
-            .addOnCompleteListener {
-                if (it.isSuccessful){
-                    mAuth.signOut()
-                }
-            }
-    }
-
-    private fun ubahPass(newPass: String){
-
-        val user = mAuth.currentUser!!
-        user.let {
-            user.delete()
-                .addOnCompleteListener {
-                if (it.isSuccessful){
-                    showToast("Berhasil menghapus akun!")
-                }else{
-                    showToast("Gagal menghapus akun")
-                }
-            }
-        }
-    }
-
-    private fun reAuth(newPass: String, oldPass: String){
-        val user = mAuth.currentUser!!
-        val credential = EmailAuthProvider.getCredential(user.email.toString(), oldPass)
-
-        user.reauthenticate(credential).addOnCompleteListener {
-            if (it.isSuccessful){
-                ubahPass(newPass)
-                showToast("User re-Authenticated")
-            }else{
-                showToast("Gagal")
-            }
-        }
-    }
+//    private fun reAuth(newPass: String, oldPass: String){
+//        val user = mAuth.currentUser!!
+//        val credential = EmailAuthProvider.getCredential(user.email.toString(), oldPass)
+//
+//        user.reauthenticate(credential).addOnCompleteListener {
+//            if (it.isSuccessful){
+//                ubahPass(newPass)
+//                showToast("User re-Authenticated")
+//            }else{
+//                showToast("Gagal")
+//            }
+//        }
+//    }
 
     private fun changeActivity( kelas: Class<*>){
         startActivity(Intent(applicationContext,kelas))
+    }
+
+    override fun onBackPressed() {
+        if (backPressed + TIME_INTERVAL > System.currentTimeMillis() ){
+            super.onBackPressed()
+            return@onBackPressed
+        }
+        else{
+            Toast.makeText(baseContext, "Tekan sekali lagi untuk keluar", Toast.LENGTH_SHORT).show()
+        }
+        backPressed = System.currentTimeMillis()
+
     }
 }

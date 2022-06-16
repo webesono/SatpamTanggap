@@ -52,6 +52,8 @@ class LoginActivity : AppCompatActivity() {
         mAuth.signInWithEmailAndPassword(email, pass)
             .addOnCompleteListener(this){
                 if (it.isSuccessful){
+                    preferenceManager.putString(Constants.KEY_USER_EMAIL, email)
+                    preferenceManager.putString(Constants.KEY_USER_P, pass)
                     database.collection(Constants.KEY_COLLECTION_SATPAM)
                         .whereEqualTo(Constants.KEY_PASSWORD2, pass2)
                         .get()
@@ -84,6 +86,7 @@ class LoginActivity : AppCompatActivity() {
                                 }
                             }
                             else{
+                                mAuth.signOut()
                                 loading(false)
                                 showToast("Login Gagal \n Pastikan akun anda telah terdaftar")
                             }
@@ -92,6 +95,7 @@ class LoginActivity : AppCompatActivity() {
 
                 }
                 else{
+                    mAuth.signOut()
                     loading(false)
                     showToast("Login Gagal \n Pastikan akun anda telah terdaftar")
                 }

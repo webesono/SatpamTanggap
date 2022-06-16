@@ -19,6 +19,7 @@ import com.example.satpamtanggap.R
 import com.example.satpamtanggap.databinding.ActivityRegipamBinding
 import com.example.satpamtanggap.utilities.Constants
 import com.example.satpamtanggap.utilities.PreferenceManager
+import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import java.io.ByteArrayOutputStream
@@ -124,6 +125,7 @@ class RegipamActivity : AppCompatActivity() {
                         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(it)
                         showToast("Satpam baru berhasil ditambahkan")
+                        reAuth()
                     }
                 }else{
                     showToast("Gagal Register")
@@ -192,5 +194,19 @@ class RegipamActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.INVISIBLE
             binding.btnRegister.visibility = View.VISIBLE
         }
+    }
+
+    private fun reAuth(){
+        mAuth.signOut()
+        val credential = EmailAuthProvider.getCredential(preferenceManager.getString(Constants.KEY_USER_EMAIL)!!, preferenceManager.getString(Constants.KEY_USER_P)!!)
+        mAuth.signInWithCredential(credential)
+            .addOnCompleteListener {
+                if (it.isSuccessful){
+                    showToast("User re-Authenticated")
+                }else{
+                    showToast("Gagal")
+                }
+
+            }
     }
 }
