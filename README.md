@@ -11,6 +11,7 @@ please note, if you want to use this application,
 3. Enter new data manually in firebase authentication, and firebase firestore so that you can login.
 
 I will show the data structures to be entered manually below
+(the image is a default image, it is generated using Base64. You can copy the string of default image in file Constants.kt)
 
 ![image.png]( https://github.com/webesono/SatpamTanggap/blob/main/Screenshot%20(333).png )
 
