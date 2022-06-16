@@ -12,6 +12,6 @@ please note, if you want to use this application,
 
 I will show the data structures to be entered manually below
 
-![image.png]( {https://github.com/webesono/SatpamTanggap/blob/main/Screenshot%20(333).png} )
+![image.png]( https://github.com/webesono/SatpamTanggap/blob/main/Screenshot%20(333).png )
 
-![image.png]( {https://github.com/webesono/SatpamTanggap/blob/main/Screenshot%20(332).png} )
+![image.png]( https://github.com/webesono/SatpamTanggap/blob/main/Screenshot%20(332).png )
